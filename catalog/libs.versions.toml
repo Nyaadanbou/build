@@ -4,6 +4,7 @@
 kotlin = "1.9.22"
 ksp = "1.9.22-1.0.17"
 asm = "9.5"
+bytebuddy = "1.14.12"
 
 # Platforms
 proxy-velocity = "3.2.0-SNAPSHOT"
@@ -12,6 +13,7 @@ server-purpur = "1.20.4-R0.1-SNAPSHOT"
 
 # Libraries
 adventure = "4.15.0"
+arrow = "1.2.1"
 cloud = "1.8.3"
 cloud2 = "2.0.0-beta.2"
 configurate = "4.2.0-SNAPSHOT"
@@ -67,10 +69,15 @@ server-purpur = { group = "org.purpurmc.purpur", name = "purpur-api", version.re
 caffeine = { group = "com.github.ben-manes.caffeine", name = "caffeine", version = "3.1.8" }
 commons-io = { group = "commons-io", name = "commons-io", version = "2.13.0" }
 guava = { group = "com.google.guava", name = "guava", version = "32.1.2-jre" }
+arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
+arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines", version.ref = "arrow" }
+arrow-optics = { module = "io.arrow-kt:arrow-optics", version.ref = "arrow" }
+arrow-optics-ksp-plugin = { module = "io.arrow-kt:arrow-optics-ksp-plugin", version.ref = "arrow" }
 
 # Java bytecode manipulation
 asm = { group = "org.ow2.asm", name = "asm", version.ref = "asm" }
 asm-commons = { group = "org.ow2.asm", name = "asm-commons", version.ref = "asm" }
+bytebuddy = { group = "net.bytebuddy", name = "byte-buddy", version.ref = "bytebuddy" }
 
 # Testing environment
 junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
@@ -121,11 +128,13 @@ cloud-kotlin-extensions = { group = "cloud.commandframework", name = "cloud-kotl
 cloud-kotlin-coroutines = { group = "cloud.commandframework", name = "cloud-kotlin-coroutines", version.ref = "cloud" }
 
 cloud2-core = { group = "org.incendo", name = "cloud-core", version.ref = "cloud2" }
+cloud2-annotations = { group = "org.incendo", name = "cloud-kotlin-annotations", version.ref = "cloud2" }
 cloud2-paper = { group = "org.incendo", name = "cloud-paper", version.ref = "cloud2" }
 cloud2-velocity = { group = "org.incendo", name = "cloud-velocity", version.ref = "cloud2" }
 cloud2-minecraft-extras = { group = "org.incendo", name = "cloud-minecraft-extras", version.ref = "cloud2" }
 cloud2-kotlin-extensions = { group = "org.incendo", name = "cloud-kotlin-extensions", version.ref = "cloud2" }
 cloud2-kotlin-coroutines = { group = "org.incendo", name = "cloud-kotlin-coroutines", version.ref = "cloud2" }
+cloud2-kotlin-coroutines-annotations = { group = "org.incendo", name = "cloud-kotlin-coroutines-annotations", version.ref = "cloud2" }
 cloud2-processors-confirmation = { group = "org.incendo", name = "cloud-processors-confirmation", version = "1.0.0-beta.1" }
 
 # Configuration
