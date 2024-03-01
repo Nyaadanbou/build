@@ -78,6 +78,7 @@ arrow-optics-ksp-plugin = { module = "io.arrow-kt:arrow-optics-ksp-plugin", vers
 asm = { group = "org.ow2.asm", name = "asm", version.ref = "asm" }
 asm-commons = { group = "org.ow2.asm", name = "asm-commons", version.ref = "asm" }
 bytebuddy = { group = "net.bytebuddy", name = "byte-buddy", version.ref = "bytebuddy" }
+bytebuddy-agent = { group = "net.bytebuddy", name = "byte-buddy-agent", version.ref = "bytebuddy" }
 
 # Testing environment
 junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
