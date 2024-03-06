@@ -7,7 +7,7 @@ javaPlatform {
 }
 
 dependencies {
-    api(libs.configurate.json) {
+    api(libs.configurate.gson) {
         exclude("com.google.errorprone")
     }
 }
@@ -17,7 +17,7 @@ publishing {
         create<MavenPublication>("configuratePlatform") {
             from(components["javaPlatform"])
             groupId = "cc.mewcraft.bom"
-            artifactId = "configurate-json"
+            artifactId = "configurate-gson"
             version = "1.0"
         }
     }
