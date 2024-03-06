@@ -140,6 +140,7 @@ cloud2-processors-confirmation = { group = "org.incendo", name = "cloud-processo
 
 # Configuration
 configurate-yaml = { group = "xyz.xenondevs.configurate", name = "configurate-yaml", version.ref = "configurate" }
+configurate-json = { group = "xyz.xenondevs.configurate", name = "configurate-json", version.ref = "configurate" }
 configurate-extra-kotlin = { group = "xyz.xenondevs.configurate", name = "configurate-extra-kotlin", version.ref = "configurate" }
 simplixstorage = { group = "com.github.simplix-softworks", name = "simplixstorage", version = "3.2.6" }
 
