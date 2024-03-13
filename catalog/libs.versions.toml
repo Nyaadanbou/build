@@ -74,6 +74,7 @@ arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
 arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines", version.ref = "arrow" }
 arrow-optics = { module = "io.arrow-kt:arrow-optics", version.ref = "arrow" }
 arrow-optics-ksp-plugin = { module = "io.arrow-kt:arrow-optics-ksp-plugin", version.ref = "arrow" }
+github-api = { group = "org.kohsuke", name = "github-api", version = "1.319" }
 
 # Java bytecode manipulation
 asm = { group = "org.ow2.asm", name = "asm", version.ref = "asm" }
