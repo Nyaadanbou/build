@@ -7,7 +7,7 @@ asm = "9.5"
 bytebuddy = "1.14.12"
 
 # Platforms
-proxy-velocity = "3.2.0-SNAPSHOT"
+proxy-velocity = "3.3.0-SNAPSHOT"
 server-paper = "1.20.4-R0.1-SNAPSHOT"
 server-purpur = "1.20.4-R0.1-SNAPSHOT"
 
