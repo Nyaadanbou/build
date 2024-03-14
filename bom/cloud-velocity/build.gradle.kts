@@ -7,7 +7,6 @@ javaPlatform {
 }
 
 dependencies {
-    val version = "2.0.0-beta.2"
     api(libs.cloud2.core) {
         exclude("org.jetbrains")
     }
