@@ -161,7 +161,7 @@ creative-server = { group = "team.unnamed", name = "creative-server", version.re
 # Model Engine (hephaestus)
 hephaestus-core = { group = "team.unnamed", name = "hephaestus-api", version.ref = "hephaestus" }
 hephaestus-reader-blockbench = { group = "team.unnamed", name = "hephaestus-reader-blockbench", version.ref = "hephaestus" }
-hephaestus-runtime-bukkit = { group = "team.unnamed", name = "hephaestus-runtime-bukkit-api", version.ref = "hephaestus" }
+hephaestus-runtime-bukkit-api = { group = "team.unnamed", name = "hephaestus-runtime-bukkit-api", version.ref = "hephaestus" }
 hephaestus-runtime-bukkit-adapt = { group = "team.unnamed", name = "hephaestus-runtime-bukkit-adapt-v1_20_R3", version.ref = "hephaestus" }
 
 # Mocha

@@ -14,8 +14,12 @@ dependencies {
     api(libs.hephaestus.reader.blockbench) {
         exclude("com.google.code.gson")
     }
-    api(libs.hephaestus.runtime.bukkit)
-    api(libs.hephaestus.runtime.bukkit.adapt)
+    api(libs.hephaestus.runtime.bukkit.api)
+    api(libs.hephaestus.runtime.bukkit.adapt) {
+        artifact {
+            classifier = "reobf"
+        }
+    }
 }
 
 publishing {
