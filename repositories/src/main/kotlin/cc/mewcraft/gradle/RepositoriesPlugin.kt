@@ -81,6 +81,13 @@ private fun RepositoryHandler.applyRepositories(project: Project) {
         }
     }
 
+    // All projects hosted on Sonatype
+    maven("https://s01.oss.sonatype.org/content/repositories/snapshots/") {
+        content {
+            includeGroup("team.unnamed") // unnamed team mocha
+        }
+    }
+
     // Towny
     maven("https://repo.glaremasters.me/repository/towny/") {
         content {
