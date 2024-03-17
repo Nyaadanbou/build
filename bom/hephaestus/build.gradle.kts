@@ -15,8 +15,7 @@ dependencies {
         exclude("com.google.code.gson")
     }
     api(libs.hephaestus.runtime.bukkit)
-    // api(libs.hephaestus.runtime.bukkit.adapt) {
-    // }
+    api(libs.hephaestus.runtime.bukkit.adapt)
 }
 
 publishing {
