@@ -18,7 +18,8 @@ cloud = "1.8.3"
 cloud2 = "2.0.0-beta.2"
 configurate = "4.2.0-SNAPSHOT"
 creative = "1.7.0"
-hephaestus = "0.6.0-SNAPSHOT"
+hephaestus = "0.7.0-dev-SNAPSHOT"
+mocha = "3.0.0-SNAPSHOT"
 i18n = "1.3-SNAPSHOT"
 invui = "1.25"
 mccoroutine = "2.13.0"
@@ -162,6 +163,9 @@ hephaestus-core = { group = "team.unnamed", name = "hephaestus-api", version.ref
 hephaestus-reader-blockbench = { group = "team.unnamed", name = "hephaestus-reader-blockbench", version.ref = "hephaestus" }
 hephaestus-runtime-bukkit = { group = "team.unnamed", name = "hephaestus-runtime-bukkit-api", version.ref = "hephaestus" }
 hephaestus-runtime-bukkit-adapt = { group = "team.unnamed", name = "hephaestus-runtime-bukkit-adapt-v1_20_R3", version.ref = "hephaestus" }
+
+# Mocha
+mocha = { group = "team.unnamed", name = "mocha", version.ref = "mocha" }
 
 # Expression parser
 evalex = { group = "com.ezylang", name = "EvalEx", version = "3.0.4" }
