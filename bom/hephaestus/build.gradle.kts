@@ -15,9 +15,7 @@ dependencies {
         exclude("com.google.code.gson")
     }
     api(libs.hephaestus.runtime.bukkit.api)
-    api(libs.hephaestus.runtime.bukkit.adapt) {
-        targetConfiguration = "reobf"
-    }
+    api("${libs.hephaestus.runtime.bukkit.adapt.get()}:reobf")
 }
 
 publishing {
