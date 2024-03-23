@@ -164,6 +164,13 @@ private fun RepositoryHandler.applyRepositories(project: Project) {
         }
     }
 
+    // PacketEvents
+    maven("https://repo.codemc.io/repository/maven-releases/") {
+        content {
+            includeGroup("com.github.retrooper.packetevents")
+        }
+    }
+
     // NoCheatPlus
     maven("https://repo.md-5.net/content/repositories/snapshots/") {
         // See doc: https://github.com/NoCheatPlus/Docs/wiki/API
