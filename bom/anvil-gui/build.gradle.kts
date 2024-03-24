@@ -11,9 +11,6 @@ dependencies {
 }
 
 publishing {
-    repositories {
-        maven(project.uri("${System.getProperty("user.home")}/MewcraftRepository"))
-    }
     publications {
         create<MavenPublication>("anvilGuiPlatform") {
             from(components["javaPlatform"])
