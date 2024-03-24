@@ -33,6 +33,4 @@ file("bom").walkTopDown().maxDepth(1).drop(1).forEach {
 }
 
 includeBuild("catalog")
-includeBuild("commons")
-includeBuild("dependencies")
 includeBuild("repositories")
