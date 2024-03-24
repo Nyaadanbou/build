@@ -17,13 +17,15 @@ dependencyResolutionManagement {
     }
     versionCatalogs {
         create("libs") {
-            from(files("catalog/libs.versions.toml"))
+            from(files("../catalog/libs.versions.toml"))
         }
     }
 }
 
-rootProject.name = "build"
+rootProject.name = "bom"
 
-includeBuild("bom")
-includeBuild("catalog")
-includeBuild("repositories")
+rootProject.projectDir.walkTopDown().maxDepth(1).drop(1).forEach { file ->
+    if (file.isDirectory && file.resolve("build.gradle.kts").exists()) {
+        include(file.name).also { println("Included: ${file.name}") }
+    }
+}
