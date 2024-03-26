@@ -7,18 +7,17 @@ javaPlatform {
 }
 
 dependencies {
-    api(libs.configurate.gson) {
-        exclude("com.google.code.gson")
-        exclude("com.google.errorprone")
+    api(libs.jgit) {
+        exclude("org.slf4j")
     }
 }
 
 publishing {
     publications {
-        create<MavenPublication>("configuratePlatform") {
+        create<MavenPublication>("creativePlatform") {
             from(components["javaPlatform"])
             groupId = "cc.mewcraft.bom"
-            artifactId = "configurate-gson"
+            artifactId = "jgit"
             version = "1.0"
         }
     }
