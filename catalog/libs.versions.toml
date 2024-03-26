@@ -62,6 +62,7 @@ bom-configurate-kotlin = "cc.mewcraft.bom:configurate-kotlin:1.0"
 bom-creative = "cc.mewcraft.bom:creative:1.0"
 bom-hephaestus = "cc.mewcraft.bom:hephaestus:1.0"
 bom-invui = "cc.mewcraft.bom:invui:1.0"
+bom-packetevents-spigot = "cc.mewcraft.bom:packetevents-spigot:1.0"
 
 # Proxy server platforms
 proxy-velocity = { group = "com.velocitypowered", name = "velocity-api", version.ref = "proxy-velocity" }
