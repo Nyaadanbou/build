@@ -17,6 +17,7 @@ arrow = "1.2.1"
 cloud = "1.8.3"
 cloud2 = "2.0.0-beta.2"
 configurate = "4.2.0-SNAPSHOT"
+commons = "1.9"
 creative = "1.7.0"
 hephaestus = "0.11.0-dev-SNAPSHOT"
 packetevents = "2.2.1"
@@ -81,6 +82,11 @@ arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines", version.ref 
 arrow-optics = { module = "io.arrow-kt:arrow-optics", version.ref = "arrow" }
 arrow-optics-ksp-plugin = { module = "io.arrow-kt:arrow-optics-ksp-plugin", version.ref = "arrow" }
 jgit = { group = "org.eclipse.jgit", name = "org.eclipse.jgit", version = "6.9.0.202403050737-r" }
+commons-collections = { group = "cc.mewcraft.commons", name = "commons-collections", version.ref = "commons" }
+commons-gson = { group = "cc.mewcraft.commons", name = "commons-gson", version.ref = "commons" }
+commons-provider = { group = "cc.mewcraft.commons", name = "commons-provider", version.ref = "commons" }
+commons-reflection = { group = "cc.mewcraft.commons", name = "commons-reflection", version.ref = "commons" }
+commons-tuple = { group = "cc.mewcraft.commons", name = "commons-tuple", version.ref = "commons" }
 
 # Java bytecode manipulation
 asm = { group = "org.ow2.asm", name = "asm", version.ref = "asm" }
