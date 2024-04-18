@@ -19,6 +19,7 @@ cloud2 = "2.0.0-beta.2"
 configurate = "4.2.0-SNAPSHOT"
 commons = "1.9"
 creative = "1.7.0"
+dokka = "1.9.20"
 hephaestus = "0.11.0-dev-SNAPSHOT"
 packetevents = "2.2.1"
 mocha = "3.0.0-SNAPSHOT"
@@ -47,6 +48,7 @@ kotlin-jvm = { group = "org.jetbrains.kotlin.jvm", name = "org.jetbrains.kotlin.
 kotlin-plugin-serialization = { group = "org.jetbrains.kotlin.plugin.serialization", name = "org.jetbrains.kotlin.plugin.serialization.gradle.plugin", version.ref = "kotlin" }
 kotlin-plugin-atomicfu = { group = "org.jetbrains.kotlin.plugin.atomicfu", name = "org.jetbrains.kotlin.plugin.atomicfu.gradle.plugin", version.ref = "kotlin" }
 ksp = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+dokka = { group = "org.jetbrains.dokka", name = "org.jetbrains.dokka.gradle.plugin", version.ref = "dokka" }
 
 # BOMs
 bom-adventure = "cc.mewcraft.bom:adventure:1.0"
@@ -241,6 +243,7 @@ mccoroutine-velocity = ["mccoroutine-velocity-api", "mccoroutine-velocity-core"]
 
 [plugins]
 
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 paperdev = { id = "io.papermc.paperweight.userdev", version = "1.5.8" }
 pluginyml-paper = { id = "net.minecrell.plugin-yml.paper", version = "0.6.0" }
 pluginyml-bukkit = { id = "net.minecrell.plugin-yml.bukkit", version = "0.6.0" } # We should never need it, never
