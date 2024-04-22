@@ -12,15 +12,11 @@ class RepositoriesPlugin : Plugin<Project> {
 }
 
 private fun RepositoryHandler.applyRepositories(project: Project) {
-    // All projects maintained by Mewcraft are published to it
-    // This is also the first step to build our own CI/CD pipeline
-//    maven(project.uri("${System.getProperty("user.home")}/MewcraftRepository"))
-
     maven("https://repo.mewcraft.cc/releases")
     maven("https://repo.mewcraft.cc/private") {
         credentials {
-            username = project.providers.gradleProperty("mewcraftRepositoryUsername").getOrElse("")
-            password = project.providers.gradleProperty("mewcraftRepositoryPassword").getOrElse("")
+            username = project.providers.gradleProperty("nyaadanbouUsername").getOrElse("")
+            password = project.providers.gradleProperty("nyaadanbouPassword").getOrElse("")
         }
     }
 
