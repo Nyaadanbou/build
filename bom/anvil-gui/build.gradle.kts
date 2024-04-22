@@ -16,7 +16,7 @@ publishing {
             from(components["javaPlatform"])
             groupId = "cc.mewcraft.bom"
             artifactId = "anvil-gui"
-            version = "1.0"
+            version = "1.0-SNAPSHOT"
         }
     }
 }

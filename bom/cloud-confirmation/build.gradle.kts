@@ -16,7 +16,7 @@ publishing {
             from(components["javaPlatform"])
             groupId = "cc.mewcraft.bom"
             artifactId = "cloud-confirmation"
-            version = "1.0"
+            version = "1.0-SNAPSHOT"
         }
     }
 }

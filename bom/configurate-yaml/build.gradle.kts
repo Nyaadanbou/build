@@ -18,7 +18,7 @@ publishing {
             from(components["javaPlatform"])
             groupId = "cc.mewcraft.bom"
             artifactId = "configurate-yaml"
-            version = "1.0"
+            version = "1.0-SNAPSHOT"
         }
     }
 }
