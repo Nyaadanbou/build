@@ -3,7 +3,6 @@
 pluginManagement {
     repositories {
         gradlePluginPortal()
-        maven(uri("${System.getProperty("user.home")}/MewcraftRepository"))
     }
 }
 
@@ -12,9 +11,6 @@ plugins {
 }
 
 dependencyResolutionManagement {
-    repositories {
-        maven(uri("${System.getProperty("user.home")}/MewcraftRepository"))
-    }
     versionCatalogs {
         create("libs") {
             from(files("catalog/libs.versions.toml"))
