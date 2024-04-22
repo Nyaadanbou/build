@@ -17,7 +17,7 @@ subprojects {
 
 tasks {
     register("publishAll") {
-        group = "mewcraft"
+        group = "nyaadanbou"
         description = "Publish all subprojects."
         subprojects.forEach { subproject ->
             val customTask = subproject.tasks.findByName("publish")
