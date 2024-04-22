@@ -4,7 +4,7 @@ subprojects {
     configure<PublishingExtension> {
         repositories {
             maven {
-                name = "mewcraftRepository"
+                name = "nyaadanbou"
                 url = uri("https://repo.mewcraft.cc/private")
                 credentials(PasswordCredentials::class)
                 authentication {

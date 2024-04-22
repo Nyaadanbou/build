@@ -12,7 +12,7 @@ catalog {
 publishing {
     repositories {
         maven {
-            name = "mewcraftRepository"
+            name = "nyaadanbou"
             url = uri("https://repo.mewcraft.cc/private")
             credentials(PasswordCredentials::class)
             authentication {
@@ -25,7 +25,7 @@ publishing {
             from(components["versionCatalog"])
             group = "cc.mewcraft.gradle"
             artifactId = "catalog"
-            version = "1.1.1-SNAPSHOT"
+            version = "1.0-SNAPSHOT"
             description = "Shared version catalogs"
         }
     }

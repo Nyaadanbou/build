@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "cc.mewcraft.gradle"
-version = "1.1.1-SNAPSHOT"
+version = "1.0-SNAPSHOT"
 
 gradlePlugin {
     plugins {
@@ -19,7 +19,7 @@ gradlePlugin {
 publishing {
     repositories {
         maven {
-            name = "mewcraftRepository"
+            name = "nyaadanbou"
             url = uri("https://repo.mewcraft.cc/private")
             credentials(PasswordCredentials::class)
             authentication {
