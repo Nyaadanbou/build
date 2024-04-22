@@ -51,22 +51,22 @@ ksp = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradl
 dokka = { group = "org.jetbrains.dokka", name = "org.jetbrains.dokka.gradle.plugin", version.ref = "dokka" }
 
 # BOMs
-bom-adventure = "cc.mewcraft.bom:adventure:1.0"
-bom-anvilgui = "cc.mewcraft.bom:anvil-gui:1.0"
-bom-asm = "cc.mewcraft.bom:asm:1.0"
-bom-caffeine = "cc.mewcraft.bom:caffeine:1.0"
-bom-cloud-confirmation = "cc.mewcraft.bom:cloud-confirmation:1.0"
-bom-cloud-kotlin = "cc.mewcraft.bom:cloud-kotlin:1.0"
-bom-cloud-paper = "cc.mewcraft.bom:cloud-paper:1.0"
-bom-cloud-velocity = "cc.mewcraft.bom:cloud-velocity:1.0"
-bom-configurate-gson = "cc.mewcraft.bom:configurate-gson:1.0"
-bom-configurate-yaml = "cc.mewcraft.bom:configurate-yaml:1.0"
-bom-configurate-kotlin = "cc.mewcraft.bom:configurate-kotlin:1.0"
-bom-creative = "cc.mewcraft.bom:creative:1.0"
-bom-hephaestus = "cc.mewcraft.bom:hephaestus:1.0"
-bom-invui = "cc.mewcraft.bom:invui:1.0"
-bom-jgit = "cc.mewcraft.bom:jgit:1.0"
-bom-packetevents-spigot = "cc.mewcraft.bom:packetevents-spigot:1.0"
+bom-adventure = "cc.mewcraft.bom:adventure:1.0-SNAPSHOT"
+bom-anvilgui = "cc.mewcraft.bom:anvil-gui:1.0-SNAPSHOT"
+bom-asm = "cc.mewcraft.bom:asm:1.0-SNAPSHOT"
+bom-caffeine = "cc.mewcraft.bom:caffeine:1.0-SNAPSHOT"
+bom-cloud-confirmation = "cc.mewcraft.bom:cloud-confirmation:1.0-SNAPSHOT"
+bom-cloud-kotlin = "cc.mewcraft.bom:cloud-kotlin:1.0-SNAPSHOT"
+bom-cloud-paper = "cc.mewcraft.bom:cloud-paper:1.0-SNAPSHOT"
+bom-cloud-velocity = "cc.mewcraft.bom:cloud-velocity:1.0-SNAPSHOT"
+bom-configurate-gson = "cc.mewcraft.bom:configurate-gson:1.0-SNAPSHOT"
+bom-configurate-yaml = "cc.mewcraft.bom:configurate-yaml:1.0-SNAPSHOT"
+bom-configurate-kotlin = "cc.mewcraft.bom:configurate-kotlin:1.0-SNAPSHOT"
+bom-creative = "cc.mewcraft.bom:creative:1.0-SNAPSHOT"
+bom-hephaestus = "cc.mewcraft.bom:hephaestus:1.0-SNAPSHOT"
+bom-invui = "cc.mewcraft.bom:invui:1.0-SNAPSHOT"
+bom-jgit = "cc.mewcraft.bom:jgit:1.0-SNAPSHOT"
+bom-packetevents-spigot = "cc.mewcraft.bom:packetevents-spigot:1.0-SNAPSHOT"
 
 # Proxy server platforms
 proxy-velocity = { group = "com.velocitypowered", name = "velocity-api", version.ref = "proxy-velocity" }
