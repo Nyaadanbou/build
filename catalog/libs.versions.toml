@@ -244,7 +244,7 @@ mccoroutine-velocity = ["mccoroutine-velocity-api", "mccoroutine-velocity-core"]
 [plugins]
 
 dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
-paperdev = { id = "io.papermc.paperweight.userdev", version = "1.5.8" }
+paperdev = { id = "io.papermc.paperweight.userdev", version = "1.5.15" }
 pluginyml-paper = { id = "net.minecrell.plugin-yml.paper", version = "0.6.0" }
 pluginyml-bukkit = { id = "net.minecrell.plugin-yml.bukkit", version = "0.6.0" } # We should never need it, never
 shadow = { id = "com.github.johnrengelman.shadow", version.ref = "shadow" }
