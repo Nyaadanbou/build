@@ -9,12 +9,16 @@ javaPlatform {
 dependencies {
     api(libs.hephaestus.core) {
         exclude("net.kyori")
-        exclude("org.jetbrains", "annotations")
+        exclude("org.jetbrains")
     }
     api(libs.hephaestus.reader.blockbench) {
         exclude("com.google.code.gson")
     }
-    api(libs.hephaestus.runtime.bukkit.api)
+    api(libs.hephaestus.runtime.bukkit.api) {
+        exclude("com.google.code.gson")
+        exclude("net.kyori")
+        exclude("org.jetbrains")
+    }
     api("${libs.hephaestus.runtime.bukkit.adapt.get()}:reobf")
 }
 

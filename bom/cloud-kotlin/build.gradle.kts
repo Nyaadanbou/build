@@ -7,8 +7,14 @@ javaPlatform {
 }
 
 dependencies {
-    api(libs.cloud2.kotlin.extensions)
-    api(libs.cloud2.kotlin.coroutines)
+    api(libs.cloud2.kotlin.coroutines) {
+        exclude("org.jetbrains.kotlin")
+        exclude("org.jetbrains.kotlinx")
+    }
+    api(libs.cloud2.kotlin.extensions) {
+        exclude("org.jetbrains.kotlin")
+        exclude("org.jetbrains.kotlinx")
+    }
 }
 
 publishing {
