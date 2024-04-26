@@ -130,7 +130,7 @@ koin-ksp-compiler = { group = "io.insert-koin", name = "koin-ksp-compiler", vers
 hikari = { group = "com.zaxxer", name = "HikariCP", version = "5.0.1" }
 
 # Redis
-jedis = { group = "redis.clients", name = "jedis", version = "4.4.6" }
+jedis = { group = "redis.clients", name = "jedis", version = "4.4.8" }
 
 # Adventure
 adventure-nbt = { group = "net.kyori", name = "adventure-nbt", version.ref = "adventure" }
