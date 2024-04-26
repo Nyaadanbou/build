@@ -1,0 +1,34 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "maven": {
+    "registryUrls": [
+      "https://repo.mewcraft.cc/releases",
+      "https://repo.purpurmc.org/snapshots",
+      "https://repo.papermc.io/repository/maven-public/",
+      "https://repo.dmulloy2.net/repository/public/",
+      "https://repo.lucko.me",
+      "https://repo.minebench.de/",
+      "https://jitpack.io",
+      "https://s01.oss.sonatype.org/content/repositories/snapshots/",
+      "https://repo.glaremasters.me/repository/towny/",
+      "https://mvn.lumine.io/repository/maven-public/",
+      "https://nexus.phoenixdevt.fr/repository/maven-public/",
+      "https://maven.enginehub.org/repo/",
+      "https://repo.citizensnpcs.co/#/",
+      "https://repo.extendedclip.com/content/repositories/placeholderapi/",
+      "https://repo.opencollab.dev/maven-snapshots/",
+      "https://repo.essentialsx.net/releases/",
+      "https://repo.codemc.io/repository/maven-snapshots/",
+      "https://repo.codemc.io/repository/maven-public/",
+      "https://repo.codemc.io/repository/maven-releases/",
+      "https://repo.md-5.net/content/repositories/snapshots/",
+      "https://nexus.betonquest.org/repository/betonquest/",
+      "https://repo.william278.net/releases",
+      "https://repo.xenondevs.xyz/releases",
+      "https://repo.unnamed.team/repository/unnamed-public/"
+    ]
+  }
+}
