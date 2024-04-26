@@ -186,7 +186,7 @@ mocha = { group = "team.unnamed", name = "mocha", version.ref = "mocha" }
 evalex = { group = "com.ezylang", name = "EvalEx", version = "3.0.4" }
 
 # Cron
-cronutils = { group = "com.cronutils", name = "cron-utils", version = "9.2.0" }
+cronutils = { group = "com.cronutils", name = "cron-utils", version = "9.2.1" }
 
 # Fast GUI creation
 anvilgui = { group = "net.wesjd", name = "anvilgui", version = "1.6.5-SNAPSHOT" }
