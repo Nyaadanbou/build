@@ -183,7 +183,7 @@ packetevents-velocity = { group = "com.github.retrooper.packetevents", name = "v
 mocha = { group = "team.unnamed", name = "mocha", version.ref = "mocha" }
 
 # Expression parser
-evalex = { group = "com.ezylang", name = "EvalEx", version = "3.0.4" }
+evalex = { group = "com.ezylang", name = "EvalEx", version = "3.2.0" }
 
 # Cron
 cronutils = { group = "com.cronutils", name = "cron-utils", version = "9.2.0" }
