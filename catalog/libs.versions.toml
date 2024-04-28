@@ -211,7 +211,7 @@ mythiclib = { group = "io.lumine", name = "MythicLib-dist", version = "1.6-SNAPS
 mmoitems = { group = "net.Indyuce", name = "MMOItems-API", version = "6.9.4-SNAPSHOT" }
 interactivebooks = { group = "net.leonardo_dgs", name = "InteractiveBooks", version = "1.6.5" }
 brewery = { group = "com.dre", name = "Brewery", version = "3.1.1" }
-miniplaceholders = { group = "io.github.miniplaceholders", name = "miniplaceholders-api", version = "2.1.0" }
+miniplaceholders = { group = "io.github.miniplaceholders", name = "miniplaceholders-api", version = "2.2.3" }
 placeholderapi = { group = "me.clip", name = "placeholderapi", version = "2.11.2" }
 gemseco = { group = "me.xanium.gemseconomy", name = "api", version = "latest.release" }
 gemseconomy = { group = "me.xanium.gemseconomy", name = "api", version = "latest.release" }
