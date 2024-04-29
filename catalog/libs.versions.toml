@@ -104,7 +104,7 @@ logback-classic = { group = "ch.qos.logback", name = "logback-classic", version.
 mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
 
 # Compile-time checking
-checker-jetbrains = { group = "org.jetbrains", name = "annotations", version = "24.0.0" }
+checker-jetbrains = { group = "org.jetbrains", name = "annotations", version = "24.1.0" }
 checker-qual = { group = "org.checkerframework", name = "checker-qual", version = "3.42.0" }
 
 # MC Coroutine (Do not use it. Use the bundle instead)
