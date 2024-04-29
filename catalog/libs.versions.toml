@@ -105,7 +105,7 @@ mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
 
 # Compile-time checking
 checker-jetbrains = { group = "org.jetbrains", name = "annotations", version = "24.0.0" }
-checker-qual = { group = "org.checkerframework", name = "checker-qual", version = "3.28.0" }
+checker-qual = { group = "org.checkerframework", name = "checker-qual", version = "3.42.0" }
 
 # MC Coroutine (Do not use it. Use the bundle instead)
 mccoroutine-bukkit-api = { group = "com.github.shynixn.mccoroutine", name = "mccoroutine-bukkit-api", version.ref = "mccoroutine" }
