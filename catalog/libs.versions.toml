@@ -8,8 +8,8 @@ bytebuddy = "1.14.14"
 
 # Platforms
 proxy-velocity = "3.3.0-SNAPSHOT"
-server-paper = "1.20.5-R0.1-SNAPSHOT"
-server-purpur = "1.20.5-R0.1-SNAPSHOT"
+server-paper = "1.20.6-R0.1-SNAPSHOT"
+server-purpur = "1.20.6-R0.1-SNAPSHOT"
 
 # Libraries
 adventure = "4.15.0"
