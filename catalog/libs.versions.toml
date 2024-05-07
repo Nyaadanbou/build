@@ -2,7 +2,7 @@
 
 # Language
 kotlin = "1.9.22"
-ksp = "1.9.22-1.0.17"
+ksp = "1.9.24-1.0.20"
 asm = "9.7"
 bytebuddy = "1.14.14"
 
