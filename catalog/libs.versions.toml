@@ -12,7 +12,7 @@ server-paper = "1.20.6-R0.1-SNAPSHOT"
 server-purpur = "1.20.6-R0.1-SNAPSHOT"
 
 # Libraries
-adventure = "4.15.0"
+adventure = "4.17.0"
 arrow = "1.2.4"
 cloud = "1.8.4"
 configurate = "4.2.0-SNAPSHOT"
