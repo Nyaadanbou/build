@@ -4,7 +4,7 @@
 kotlin = "1.9.22"
 ksp = "1.9.22-1.0.17"
 asm = "9.7"
-bytebuddy = "1.14.14"
+bytebuddy = "1.14.15"
 
 # Platforms
 proxy-velocity = "3.3.0-SNAPSHOT"
