@@ -103,6 +103,7 @@ private fun RepositoryHandler.applyRepositories(project: Project) {
     maven("https://mvn.lumine.io/repository/maven-public/") {
         content {
             includeGroup("io.lumine") // MythicMobs
+            includeGroup("com.ticxo.modelengine") // ModelEngine
         }
     }
 

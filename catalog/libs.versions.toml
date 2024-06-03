@@ -168,6 +168,9 @@ creative-api = { group = "team.unnamed", name = "creative-api", version.ref = "c
 creative-serializer-minecraft = { group = "team.unnamed", name = "creative-serializer-minecraft", version.ref = "creative" }
 creative-server = { group = "team.unnamed", name = "creative-server", version.ref = "creative" }
 
+# Model Engine (Ticxo)
+modelengine-api = { group = "com.ticxo.modelengine", name = "ModelEngine", version = "R4.0.6" }
+
 # Model Engine (hephaestus)
 hephaestus-core = { group = "team.unnamed", name = "hephaestus-api", version.ref = "hephaestus" }
 hephaestus-reader-blockbench = { group = "team.unnamed", name = "hephaestus-reader-blockbench", version.ref = "hephaestus" }
