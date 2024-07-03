@@ -20,7 +20,7 @@ commons = "1.9"
 creative = "1.7.2"
 dokka = "1.9.20"
 hephaestus = "0.11.0-dev-SNAPSHOT"
-packetevents = "2.3.0"
+packetevents = "2.4.0"
 mocha = "3.0.0-SNAPSHOT"
 i18n = "1.3-SNAPSHOT"
 invui = "1.25"
@@ -182,8 +182,8 @@ hephaestus-runtime-bukkit-adapt = { group = "team.unnamed", name = "hephaestus-r
 shadow-nbt = { group = "cc.mewcraft", name = "shadow-nbt", version.ref = "shadow-nbt" }
 
 # PacketEvents
-packetevents-spigot = { group = "com.github.retrooper.packetevents", name = "spigot", version.ref = "packetevents" }
-packetevents-velocity = { group = "com.github.retrooper.packetevents", name = "velocity", version.ref = "packetevents" }
+packetevents-spigot = { group = "com.github.retrooper", name = "packetevents-spigot", version.ref = "packetevents" }
+packetevents-velocity = { group = "com.github.retrooper", name = "packetevents-velocity", version.ref = "packetevents" }
 
 # Mocha
 mocha = { group = "team.unnamed", name = "mocha", version.ref = "mocha" }

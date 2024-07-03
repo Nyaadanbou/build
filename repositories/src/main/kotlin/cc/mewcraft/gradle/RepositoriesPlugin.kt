@@ -172,7 +172,7 @@ private fun RepositoryHandler.applyRepositories(project: Project) {
     // PacketEvents
     maven("https://repo.codemc.io/repository/maven-releases/") {
         content {
-            includeGroup("com.github.retrooper.packetevents")
+            includeGroup("com.github.retrooper")
         }
     }
 
