@@ -23,7 +23,7 @@ hephaestus = "0.11.0-dev-SNAPSHOT"
 packetevents = "2.4.0"
 mocha = "3.0.0"
 i18n = "1.3-SNAPSHOT"
-invui = "1.25"
+invui = "1.33"
 mccoroutine = "2.16.0"
 shadow-nbt = "1.20.6-SNAPSHOT"
 
@@ -198,7 +198,7 @@ cronutils = { group = "com.cronutils", name = "cron-utils", version = "9.2.1" }
 anvilgui = { group = "net.wesjd", name = "anvilgui", version = "1.6.5-SNAPSHOT" }
 invui-core = { group = "xyz.xenondevs.invui", name = "invui-core", version.ref = "invui" }
 invui-invaccess = { group = "xyz.xenondevs.invui", name = "inventory-access", version.ref = "invui" }
-invui-invaccess-nms = { group = "xyz.xenondevs.invui", name = "inventory-access-r18", version.ref = "invui" }
+invui-invaccess-nms = { group = "xyz.xenondevs.invui", name = "inventory-access-r19", version.ref = "invui" }
 invui-extra-kotlin = { group = "xyz.xenondevs.invui", name = "invui-kotlin", version.ref = "invui" }
 
 # Standalone Paper/Velocity plugins
