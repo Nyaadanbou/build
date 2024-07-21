@@ -33,7 +33,7 @@ shadow = "8.1.1"
 
 # Test
 mockk = "1.13.10"
-mockbukkit = "3.9.0"
+mockbukkit = "3.93.2"
 junit4 = "4.13.2"
 junit5 = "5.10.2"
 logback-classic = "1.5.6"
