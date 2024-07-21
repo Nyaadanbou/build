@@ -33,6 +33,7 @@ shadow = "8.1.1"
 
 # Test
 mockk = "1.13.10"
+mockbukkit = "3.9.0"
 junit4 = "4.13.2"
 junit5 = "5.10.2"
 logback-classic = "1.5.6"
@@ -102,6 +103,7 @@ junit5-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.
 junit5-engine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version.ref = "junit5" }
 logback-classic = { group = "ch.qos.logback", name = "logback-classic", version.ref = "logback-classic" }
 mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+mockbukkit = { group = "com.github.seeseemelk", name = "MockBukkit-v1.20", version.ref = "mockbukkit" }
 
 # Compile-time checking
 checker-jetbrains = { group = "org.jetbrains", name = "annotations", version = "24.1.0" }
