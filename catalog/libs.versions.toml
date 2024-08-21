@@ -29,7 +29,7 @@ shadow-nbt = "1.20.6-SNAPSHOT"
 
 # Build
 indra = "3.1.3"
-shadow = "8.1.1"
+shadow = "8.3.0"
 
 # Test
 mockk = "1.13.10"
@@ -44,7 +44,7 @@ logback-classic = "1.5.6"
 indra-common = { group = "net.kyori", name = "indra-common", version.ref = "indra" }
 indra-licenser-spotless = { group = "net.kyori", name = "indra-licenser-spotless", version.ref = "indra" }
 indra-publishing-sonatype = { group = "net.kyori", name = "indra-publishing-sonatype", version.ref = "indra" }
-shadow = { group = "com.github.johnrengelman.shadow", name = "com.github.johnrengelman.shadow.gradle.plugin", version.ref = "shadow" }
+shadow = { group = "com.gradleup.shadow", name = "com.gradleup.shadow.gradle.plugin", version.ref = "shadow" }
 kotlin-jvm = { group = "org.jetbrains.kotlin.jvm", name = "org.jetbrains.kotlin.jvm.gradle.plugin", version.ref = "kotlin" }
 kotlin-plugin-serialization = { group = "org.jetbrains.kotlin.plugin.serialization", name = "org.jetbrains.kotlin.plugin.serialization.gradle.plugin", version.ref = "kotlin" }
 kotlin-plugin-atomicfu = { group = "org.jetbrains.kotlin.plugin.atomicfu", name = "org.jetbrains.kotlin.plugin.atomicfu.gradle.plugin", version.ref = "kotlin" }
@@ -255,4 +255,4 @@ dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 paperdev = { id = "io.papermc.paperweight.userdev", version = "1.7.1" }
 pluginyml-paper = { id = "net.minecrell.plugin-yml.paper", version = "0.6.0" }
 pluginyml-bukkit = { id = "net.minecrell.plugin-yml.bukkit", version = "0.6.0" } # We should never need it, never
-shadow = { id = "com.github.johnrengelman.shadow", version.ref = "shadow" }
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
