@@ -198,7 +198,7 @@ cronutils = { group = "com.cronutils", name = "cron-utils", version = "9.2.1" }
 anvilgui = { group = "net.wesjd", name = "anvilgui", version = "1.6.5-SNAPSHOT" }
 invui-core = { group = "xyz.xenondevs.invui", name = "invui-core", version.ref = "invui" }
 invui-invaccess = { group = "xyz.xenondevs.invui", name = "inventory-access", version.ref = "invui" }
-invui-invaccess-nms = { group = "xyz.xenondevs.invui", name = "inventory-access-r19", version.ref = "invui" }
+invui-invaccess-nms = { group = "xyz.xenondevs.invui", name = "inventory-access-r20", version.ref = "invui" }
 invui-extra-kotlin = { group = "xyz.xenondevs.invui", name = "invui-kotlin", version.ref = "invui" }
 
 # Standalone Paper/Velocity plugins
