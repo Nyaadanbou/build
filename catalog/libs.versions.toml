@@ -146,7 +146,7 @@ cloud-minecraft-extras = { group = "cloud.commandframework", name = "cloud-minec
 cloud-kotlin-extensions = { group = "cloud.commandframework", name = "cloud-kotlin-extensions", version.ref = "cloud" }
 cloud-kotlin-coroutines = { group = "cloud.commandframework", name = "cloud-kotlin-coroutines", version.ref = "cloud" }
 
-cloud2-core = { group = "org.incendo", name = "cloud-core", version = "2.0.0-rc.2" }
+cloud2-core = { group = "org.incendo", name = "cloud-core", version = "2.0.0" }
 cloud2-paper = { group = "org.incendo", name = "cloud-paper", version = "2.0.0-beta.9" }
 cloud2-velocity = { group = "org.incendo", name = "cloud-velocity", version = "2.0.0-beta.9" }
 cloud2-minecraft-extras = { group = "org.incendo", name = "cloud-minecraft-extras", version = "2.0.0-beta.9" }
