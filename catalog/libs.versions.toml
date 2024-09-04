@@ -1,8 +1,8 @@
 [versions]
 
 # Language
-kotlin = "2.0.10"
-ksp = "2.0.10-1.0.24"
+kotlin = "2.0.20"
+ksp = "2.0.20-1.0.24"
 asm = "9.7"
 bytebuddy = "1.14.15"
 
