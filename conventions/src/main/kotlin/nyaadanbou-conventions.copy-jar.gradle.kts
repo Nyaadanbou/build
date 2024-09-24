@@ -1,7 +1,7 @@
 /**
  * ## `copyJar`
  *
- * 提供了一个新的任务 `build:copyJar`, 用于快速复制和部署输出的 JAR.
+ * 提供了一个新的任务 `build:copyJar`, 用于复制和部署构建生成的 JAR 文件.
  *
  * ### 默认行为
  *
@@ -9,87 +9,97 @@
  * - 如果项目启用了 `shadow` 插件, 任务会复制 `shadowJar` 任务的输出.
  * - 如果项目没有启用 `shadow` 插件, 则会复制 `jar` 任务的输出.
  *
- * ### 自定义配置
+ * ### 配置
  *
- * 用户可以通过 `copyJar` 扩展来自定义输出 JAR 的文件名.
+ * 用户可以通过 `copyJar` 扩展来自定义输出 JAR 的文件名和目标平台.
  * 默认情况下, 文件名格式为 `${project.name}-${project.version}.jar`.
  *
- * 例如:
+ * 必须指定 `env` 属性, 用于选择目标平台.
+ *
+ * 示例配置：
  * ```kotlin
  * copyJar {
- *     jarName.set("my-custom-name.jar")
+ *   environment.set("paper")
+ *   jarFileName.set("my-custom-name.jar")
  * }
  * ```
  *
- * ### 本地路径配置
+ * ### `gradle.properties` 文件配置
  *
- * 如果需要额外的复制到自定义路径, 可以在项目根目录创建 `copyjar.properties` 文件, 并在文件中配置以下属性:
+ * 每个平台的复制路径和同步路径都需要在系统的 `gradle.properties` 文件中进行配置. 即使某个平台未使用, 也必须为其提供路径配置.
  *
- * - `copyJar.copyPath`: 指定要复制的额外路径.
- * - `copyJar.syncPaths`: 一组路径（以逗号分隔）, 用于 `syncJar` 任务.
+ * - `copyJar.copyPath.{env}`: 指定 {env} 平台的复制路径.
+ * - `copyJar.syncPath.{env}`: 指定 {env} 平台的同步路径列表, 多个路径以逗号分隔.
  *
- * 示例 `copyjar.properties` 文件内容:
+ * 示例 `gradle.properties` 文件内容：
  * ```
- * copyJar.copyPath=/path/to/custom/dir
- * copyJar.syncPaths=dev:server/plugins,test:backup/plugins
+ * copyJar.copyPath.{env}=/path/to/xyz
+ * copyJar.syncPath.{env}=dev:data/xyz/plugins,test:backup/xyz/plugins
  * ```
  *
  * ### `syncJar` 任务
  *
  * `syncJar` 任务用于将生成的 JAR 文件同步到多个指定路径, 使用的是 `rsync` 命令, 支持远程服务器路径.
- * 用户可以在 `copyjar.properties` 文件中通过 `copyJar.syncPaths` 来配置这些路径.
+ * 用户可以通过 `gradle.properties` 文件中的 `copyJar.syncPath.{type}` 来配置这些路径.
+ *
+ * `syncJar` 任务会根据 `env` 确定使用哪个平台的配置.
+ * 该任务会将 JAR 文件同步到配置文件中指定的路径列表中.
  */
+
 
 import java.nio.file.Path
 import java.nio.file.Paths
-import java.util.Properties
 
 plugins {
     java
 }
 
-fun loadConfig(): Properties {
-    val properties = Properties()
-    val propertiesFile = file("copyjar.properties")
+data class CopyConfig(
+    val env: String,
+    val copyPath: Path?,
+    val syncPaths: List<String>
+)
 
-    if (propertiesFile.exists()) {
-        propertiesFile.inputStream().use { properties.load(it) }
-    }
-
-    return properties
+fun getCopyConfig(project: Project, env: String): CopyConfig {
+    val copyPath = project.findProperty("copyJar.copyPath.$env")?.toString()?.let { Paths.get(it) }
+    val syncPathList = project.findProperty("copyJar.syncPath.$env")?.toString()?.split(",") ?: emptyList()
+    return CopyConfig(env, copyPath, syncPathList)
 }
-
-// 加载本地配置文件
-val config = loadConfig()
-
-// 获取本地属性值
-val copyPath: Path? = config.getProperty("copyJar.copyPath")?.let { Paths.get(it) }
-val syncPaths: List<String> = config.getProperty("copyJar.syncPaths")?.split(",") ?: emptyList()
 
 // 允许用户自定义复制操作
 interface CopyJarExtension {
+    /**
+     * 目标平台的种类.
+     */
+    val environment: Property<String>
+
     /**
      * 复制后的 JAR 文件名, 包括文件扩展名.
      *
      * 默认为 `${project.name}-${project.version}.jar`.
      */
-    val jarName: Property<String>
+    val jarFileName: Property<String>
 }
 
 // 创建扩展, 用于用户自定义配置
 val copyJar = project.extensions.create<CopyJarExtension>("copyJar").apply {
-    jarName.convention("${project.name}-${project.version}.jar")
+    jarFileName.convention("${project.name}-${project.version}.jar")
 }
 
 tasks {
     register<Copy>("copyJar") {
         group = "build"
-
         duplicatesStrategy = DuplicatesStrategy.WARN
         doNotTrackState("Overwrites the plugin jar to allow for easier reloading")
 
+        // 获取平台的类型
+        val env = copyJar.environment.orNull ?: throw GradleException("`env` is required")
+
+        // 获取当前平台的配置
+        val copyConfig = getCopyConfig(project, env)
+
         // 获取用户自定义的 JAR 文件名
-        val jarName = copyJar.jarName.orNull ?: throw GradleException("`jarName` is required")
+        val jarName = copyJar.jarFileName.orNull ?: throw GradleException("`jarName` is required")
 
         // 获取构建输出的 JAR 文件（来自 `shadowJar` 或 `jar` 任务）
         val jarTask = findByName("shadowJar") ?: findByName("jar") ?: throw GradleException("No `shadowJar` or `jar` task found")
@@ -105,15 +115,15 @@ tasks {
             logger.lifecycle("Copied to project build directory")
         }
 
-        // 如果在 copyjar.properties 中指定了 copyJar.copyPath, 则复制到指定的路径
-        if (copyPath != null) {
+        // 如果 gradle.properties 中指定了平台对应的 copyPath, 则复制到指定的路径
+        copyConfig.copyPath?.let { path ->
             doLast {
                 copy {
                     duplicatesStrategy = DuplicatesStrategy.WARN
                     from(jarTask)
-                    into(copyPath)
+                    into(path)
                     rename { jarName }
-                    logger.lifecycle("Copied to extra custom directory: $copyPath")
+                    logger.lifecycle("Copied to extra custom directory: $path")
                 }
             }
         }
@@ -121,14 +131,21 @@ tasks {
 
     register<Task>("syncJar") {
         group = "build"
+        doNotTrackState("Syncs the plugin jar to multiple paths")
+
+        // 获取平台的类型
+        val env = copyJar.environment.orNull ?: throw GradleException("`env` is required")
+
+        // 获取当前平台的配置
+        val copyConfig = getCopyConfig(project, env)
 
         doLast {
-            if (syncPaths.isEmpty()) {
-                logger.error("No sync path found, skipping syncing")
+            if (copyConfig.syncPaths.isEmpty()) {
+                logger.error("No sync path found for copy type '${copyConfig.env}', skipping syncing")
                 return@doLast
             }
 
-            val jarName = copyJar.jarName.orNull ?: throw GradleException("`jarName` is required")
+            val jarName = copyJar.jarFileName.orNull ?: throw GradleException("`jarName` is required")
             val jarFile = layout.buildDirectory.file(jarName).get().asFile
 
             if (!jarFile.exists()) {
@@ -136,7 +153,7 @@ tasks {
                 return@doLast
             }
 
-            for (syncPath in syncPaths) {
+            for (syncPath in copyConfig.syncPaths) {
                 val args = arrayOf("rsync", "-avz", jarFile.path, syncPath)
                 logger.lifecycle("Executing command: ${args.joinToString(" ")}")
                 exec { commandLine(*args) }
