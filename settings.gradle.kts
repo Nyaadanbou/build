@@ -23,4 +23,3 @@ rootProject.name = "build"
 includeBuild("bom")
 includeBuild("catalog")
 includeBuild("conventions")
-includeBuild("repositories")

@@ -3,6 +3,6 @@ tasks {
         group = "nyaadanbou"
         dependsOn(gradle.includedBuild("bom").task(":publishAll"))
         dependsOn(gradle.includedBuild("catalog").task(":publish"))
-        dependsOn(gradle.includedBuild("repositories").task(":publish"))
+        dependsOn(gradle.includedBuild("conventions").task(":publish"))
     }
 }
