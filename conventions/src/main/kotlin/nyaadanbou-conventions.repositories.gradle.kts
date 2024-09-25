@@ -2,8 +2,8 @@ repositories {
     maven("https://repo.mewcraft.cc/releases")
     maven("https://repo.mewcraft.cc/private") {
         credentials {
-            username = project.providers.gradleProperty("nyaadanbouUsername").getOrElse("")
-            password = project.providers.gradleProperty("nyaadanbouPassword").getOrElse("")
+            username = project.providers.gradleProperty("nyaadanbou.mavenUsername").orNull
+            password = project.providers.gradleProperty("nyaadanbou.mavenPassword").orNull
         }
     }
 

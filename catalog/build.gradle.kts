@@ -14,9 +14,9 @@ publishing {
         maven {
             name = "nyaadanbou"
             url = uri("https://repo.mewcraft.cc/private")
-            credentials(PasswordCredentials::class)
-            authentication {
-                create<BasicAuthentication>("basic")
+            credentials {
+                username = project.findProperty("nyaadanbou.mavenUsername") as String?
+                password = project.findProperty("nyaadanbou.mavenPassword") as String?
             }
         }
     }
