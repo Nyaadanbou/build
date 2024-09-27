@@ -93,13 +93,13 @@ tasks {
         doNotTrackState("Overwrites the plugin jar to allow for easier reloading")
 
         // 获取平台的类型
-        val env = copyJar.environment.orNull ?: throw GradleException("`env` is required")
+        val environment = copyJar.environment.orNull ?: throw GradleException("`environment` is required")
 
         // 获取当前平台的配置
-        val copyConfig = getCopyConfig(project, env)
+        val copyConfig = getCopyConfig(project, environment)
 
         // 获取用户自定义的 JAR 文件名
-        val jarName = copyJar.jarFileName.orNull ?: throw GradleException("`jarName` is required")
+        val jarName = copyJar.jarFileName.orNull ?: throw GradleException("`jarFileName` is required")
 
         // 获取构建输出的 JAR 文件（来自 `shadowJar` 或 `jar` 任务）
         val jarTask = findByName("shadowJar") ?: findByName("jar") ?: throw GradleException("No `shadowJar` or `jar` task found")
@@ -134,10 +134,10 @@ tasks {
         doNotTrackState("Syncs the plugin jar to multiple paths")
 
         // 获取平台的类型
-        val env = copyJar.environment.orNull ?: throw GradleException("`env` is required")
+        val environment = copyJar.environment.orNull ?: throw GradleException("`environment` is required")
 
         // 获取当前平台的配置
-        val copyConfig = getCopyConfig(project, env)
+        val copyConfig = getCopyConfig(project, environment)
 
         doLast {
             if (copyConfig.syncPaths.isEmpty()) {
@@ -145,7 +145,7 @@ tasks {
                 return@doLast
             }
 
-            val jarName = copyJar.jarFileName.orNull ?: throw GradleException("`jarName` is required")
+            val jarName = copyJar.jarFileName.orNull ?: throw GradleException("`jarFileName` is required")
             val jarFile = layout.buildDirectory.file(jarName).get().asFile
 
             if (!jarFile.exists()) {
