@@ -239,6 +239,7 @@ betonquest = { group = "org.betonquest", name = "betonquest", version = "2.0.1-S
 huskhomes = { group = "net.william278", name = "huskhomes", version = "4.4.1" }
 husksync = { group = "net.william278", name = "husksync", version = "2.2.5" }
 papiproxybridge = { group = "net.william278", name = "papiproxybridge", version = "1.2.2" }
+adventurelevel = { group = "cc.mewcraft.adventurelevel", name = "api", version = "1.1.0" }
 
 [bundles]
 
