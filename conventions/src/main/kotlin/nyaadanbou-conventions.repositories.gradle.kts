@@ -140,14 +140,6 @@ repositories {
         }
     }
 
-    // AnvilGUI, WorldGuardWrapper
-    maven("https://repo.codemc.io/repository/maven-snapshots/") {
-        content {
-            includeGroup("net.wesjd")
-            includeGroup("org.codemc.worldguardwrapper")
-        }
-    }
-
     // BetterGUI
     maven("https://repo.codemc.io/repository/maven-public/") {
         content {
@@ -159,6 +151,15 @@ repositories {
     // PacketEvents
     maven("https://repo.codemc.io/repository/maven-releases/") {
         content {
+            includeGroup("com.github.retrooper")
+        }
+    }
+
+    // PacketEvents, AnvilGUI, WorldGuardWrapper
+    maven("https://repo.codemc.io/repository/maven-snapshots/") {
+        content {
+            includeGroup("net.wesjd")
+            includeGroup("org.codemc.worldguardwrapper")
             includeGroup("com.github.retrooper")
         }
     }
