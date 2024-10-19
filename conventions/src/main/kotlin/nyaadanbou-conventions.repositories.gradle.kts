@@ -183,6 +183,8 @@ repositories {
     maven("https://repo.william278.net/releases") {
         content {
             includeGroup("net.william278")
+            includeGroup("net.william278.huskhomes")
+            includeGroup("net.william278.husksync")
         }
     }
 
