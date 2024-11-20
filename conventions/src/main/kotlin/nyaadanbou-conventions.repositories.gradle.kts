@@ -202,4 +202,11 @@ repositories {
             includeGroup("team.unnamed")
         }
     }
+
+    // ChestSort
+    maven("https://repo.jeff-media.com/public/") {
+        content {
+            includeGroup("de.jeff_media")
+        }
+    }
 }
