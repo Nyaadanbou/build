@@ -6,6 +6,7 @@
  * ### 默认行为
  *
  * `copyJar` 任务会自动将构建生成的 JAR 文件复制到项目的 `build/` 目录下, 并按用户指定的文件名进行重命名.
+ * - 如果项目启用了 `paperweight` 插件, 任务会复制 `reobfJar` 任务的输出.
  * - 如果项目启用了 `shadow` 插件, 任务会复制 `shadowJar` 任务的输出.
  * - 如果项目没有启用 `shadow` 插件, 则会复制 `jar` 任务的输出.
  *
@@ -57,7 +58,7 @@ plugins {
 data class CopyConfig(
     val env: String,
     val copyPath: Path?,
-    val syncPaths: List<String>
+    val syncPaths: List<String>,
 )
 
 fun getCopyConfig(project: Project, env: String): CopyConfig {
@@ -72,6 +73,13 @@ interface CopyJarExtension {
      * 目标平台的种类.
      */
     val environment: Property<String>
+
+    /**
+     * 产生 JAR 文件的任务.
+     *
+     * 默认会首先寻找 `shadowJar` 任务, 如果没有则寻找 `jar` 任务.
+     */
+    val jarTaskName: Property<String>
 
     /**
      * 复制后的 JAR 文件名, 包括文件扩展名.
@@ -102,7 +110,10 @@ tasks {
         val jarName = copyJar.jarFileName.orNull ?: throw GradleException("`jarFileName` is required")
 
         // 获取构建输出的 JAR 文件（来自 `shadowJar` 或 `jar` 任务）
-        val jarTask = findByName("shadowJar") ?: findByName("jar") ?: throw GradleException("No `shadowJar` or `jar` task found")
+        val jarTask = copyJar.jarTaskName.orNull?.let(::findByName)
+            ?: findByName("shadowJar")
+            ?: findByName("jar")
+            ?: throw GradleException("No `shadowJar` or `jar` task found")
 
         // 默认复制到项目的 build 目录下
         val destFile = layout.buildDirectory
