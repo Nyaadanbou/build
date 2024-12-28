@@ -25,7 +25,7 @@ publishing {
             from(components["versionCatalog"])
             group = "cc.mewcraft.gradle"
             artifactId = "catalog"
-            version = "0.1"
+            version = "0.2"
             description = "Shared version catalogs"
         }
     }

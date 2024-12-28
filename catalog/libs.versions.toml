@@ -68,7 +68,7 @@ bom-configurate-yaml = "cc.mewcraft.bom:configurate-yaml:0.1"
 bom-configurate-kotlin = "cc.mewcraft.bom:configurate-kotlin:0.1"
 bom-creative = "cc.mewcraft.bom:creative:0.1"
 bom-hephaestus = "cc.mewcraft.bom:hephaestus:0.1"
-bom-invui = "cc.mewcraft.bom:invui:0.1"
+bom-invui = "cc.mewcraft.bom:invui:0.2"
 bom-jgit = "cc.mewcraft.bom:jgit:0.1"
 bom-packetevents-spigot = "cc.mewcraft.bom:packetevents-spigot:0.1"
 
@@ -201,7 +201,7 @@ cronutils = { group = "com.cronutils", name = "cron-utils", version = "9.2.1" }
 anvilgui = { group = "net.wesjd", name = "anvilgui", version = "1.6.5-SNAPSHOT" }
 invui-core = { group = "xyz.xenondevs.invui", name = "invui-core", version.ref = "invui" }
 invui-invaccess = { group = "xyz.xenondevs.invui", name = "inventory-access", version.ref = "invui" }
-invui-invaccess-nms = { group = "xyz.xenondevs.invui", name = "inventory-access-r20", version.ref = "invui" }
+invui-invaccess-nms = { group = "xyz.xenondevs.invui", name = "inventory-access-r21", version.ref = "invui" }
 invui-extra-kotlin = { group = "xyz.xenondevs.invui", name = "invui-kotlin", version.ref = "invui" }
 
 # Standalone Paper/Velocity plugins
