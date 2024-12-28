@@ -28,7 +28,7 @@ publishing {
             from(components["javaPlatform"])
             groupId = "cc.mewcraft.bom"
             artifactId = "hephaestus"
-            version = "1.0-SNAPSHOT"
+            version = "0.1"
         }
     }
 }
