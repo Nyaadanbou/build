@@ -23,7 +23,7 @@ commons = "1.9"
 creative = "1.7.2"
 dokka = "1.9.20"
 hephaestus = "0.11.0-dev-SNAPSHOT"
-packetevents = "2.6.0"
+packetevents = "2.7.0"
 mocha = "3.0.0"
 i18n = "1.3-SNAPSHOT"
 invui = "1.43"
@@ -70,7 +70,7 @@ bom-creative = "cc.mewcraft.bom:creative:0.1"
 bom-hephaestus = "cc.mewcraft.bom:hephaestus:0.1"
 bom-invui = "cc.mewcraft.bom:invui:0.2"
 bom-jgit = "cc.mewcraft.bom:jgit:0.1"
-bom-packetevents-spigot = "cc.mewcraft.bom:packetevents-spigot:0.1"
+bom-packetevents-spigot = "cc.mewcraft.bom:packetevents-spigot:0.2"
 
 # Proxy server platforms
 proxy-velocity = { group = "com.velocitypowered", name = "velocity-api", version.ref = "proxy-velocity" }
