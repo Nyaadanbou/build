@@ -20,7 +20,7 @@ publishing {
             from(components["javaPlatform"])
             groupId = "cc.mewcraft.bom"
             artifactId = "packetevents-spigot"
-            version = "0.1"
+            version = "0.2"
         }
     }
 }
