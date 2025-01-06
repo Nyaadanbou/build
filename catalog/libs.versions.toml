@@ -66,6 +66,7 @@ bom-cloud-velocity = "cc.mewcraft.bom:cloud-velocity:0.1"
 bom-configurate-gson = "cc.mewcraft.bom:configurate-gson:0.1"
 bom-configurate-yaml = "cc.mewcraft.bom:configurate-yaml:0.1"
 bom-configurate-kotlin = "cc.mewcraft.bom:configurate-kotlin:0.1"
+bom-configurate-dfu4 = "cc.mewcraft.bom:configurate-dfu:0.1"
 bom-creative = "cc.mewcraft.bom:creative:0.1"
 bom-hephaestus = "cc.mewcraft.bom:hephaestus:0.1"
 bom-invui = "cc.mewcraft.bom:invui:0.2"
@@ -161,6 +162,7 @@ cloud2-processors-confirmation = { group = "org.incendo", name = "cloud-processo
 configurate-yaml = { group = "xyz.xenondevs.configurate", name = "configurate-yaml", version.ref = "configurate" }
 configurate-gson = { group = "xyz.xenondevs.configurate", name = "configurate-gson", version.ref = "configurate" }
 configurate-extra-kotlin = { group = "xyz.xenondevs.configurate", name = "configurate-extra-kotlin", version.ref = "configurate" }
+configurate-extra-dfu4 = { group = "xyz.xenondevs.configurate", name = "configurate-extra-dfu4", version.ref = "configurate" }
 simplixstorage = { group = "com.github.simplix-softworks", name = "simplixstorage", version = "3.2.6" }
 
 # I18n
