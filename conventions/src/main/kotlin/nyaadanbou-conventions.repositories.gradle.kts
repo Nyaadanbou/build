@@ -188,10 +188,11 @@ repositories {
         }
     }
 
-    // Nova, InvUI, Configurate (xyz.xenondevs fork)
+    // Nova, InvUI, Commons, Configurate
     maven("https://repo.xenondevs.xyz/releases") {
         content {
             includeGroup("xyz.xenondevs.invui")
+            includeGroup("xyz.xenondevs.commons")
             includeGroup("xyz.xenondevs.configurate")
         }
     }
