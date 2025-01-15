@@ -19,7 +19,7 @@ publishing {
         create<MavenPublication>("configurateKotlinPlatform") {
             from(components["javaPlatform"])
             groupId = "cc.mewcraft.bom"
-            artifactId = "configurate-kotlin"
+            artifactId = "configurate-extra-kotlin"
             version = "0.1"
         }
     }

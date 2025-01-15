@@ -19,7 +19,7 @@ publishing {
         create<MavenPublication>("configuratePlatform") {
             from(components["javaPlatform"])
             groupId = "cc.mewcraft.bom"
-            artifactId = "configurate-dfu4"
+            artifactId = "configurate-extra-dfu4"
             version = "0.1"
         }
     }
