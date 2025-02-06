@@ -4,14 +4,14 @@ plugins {
 }
 
 group = "cc.mewcraft.gradle"
-version = "1.1"
+version = "1.2"
 
 java {
     withSourcesJar()
 }
 
 kotlin {
-    jvmToolchain(17)
+    jvmToolchain(21)
 }
 
 repositories {
