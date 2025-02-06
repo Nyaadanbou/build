@@ -10,7 +10,7 @@ dependencies {
     api(libs.configurate.extra.dfu4) {
         exclude("com.mojang")
         exclude("com.google.errorprone")
-        exclude("xyz.xenondevs.configurate")
+        exclude("cc.mewcraft.configurate")
     }
 }
 
@@ -20,7 +20,7 @@ publishing {
             from(components["javaPlatform"])
             groupId = "cc.mewcraft.bom"
             artifactId = "configurate-extra-dfu4"
-            version = "0.1"
+            version = "0.2"
         }
     }
 }

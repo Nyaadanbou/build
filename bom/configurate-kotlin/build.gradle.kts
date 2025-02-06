@@ -10,7 +10,7 @@ dependencies {
     api(libs.configurate.extra.kotlin) {
         exclude("org.jetbrains.kotlin")
         exclude("org.jetbrains.kotlinx")
-        exclude("xyz.xenondevs.configurate")
+        exclude("cc.mewcraft.configurate")
     }
 }
 
@@ -20,7 +20,7 @@ publishing {
             from(components["javaPlatform"])
             groupId = "cc.mewcraft.bom"
             artifactId = "configurate-extra-kotlin"
-            version = "0.1"
+            version = "0.2"
         }
     }
 }
