@@ -26,7 +26,7 @@ publishing {
             from(components["javaPlatform"])
             groupId = "cc.mewcraft.bom"
             artifactId = "cloud-paper"
-            version = "0.1"
+            version = "0.2"
         }
     }
 }
