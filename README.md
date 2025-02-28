@@ -11,4 +11,4 @@
 # How to update
 
 1. `git pull` 更新此项目的文件
-2. `gradle :deploy` 将依赖部署到远程仓库
+2. `gradle :deployAll` 将依赖部署到远程仓库

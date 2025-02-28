@@ -16,6 +16,16 @@ subprojects {
 }
 
 tasks {
+    register("buildAll") {
+        group = "nyaadanbou"
+        description = "Build all subprojects."
+        subprojects.forEach { subproject ->
+            val customTask = subproject.tasks.findByName("build")
+            if (customTask != null) {
+                dependsOn(customTask)
+            }
+        }
+    }
     register("publishAll") {
         group = "nyaadanbou"
         description = "Publish all subprojects."
