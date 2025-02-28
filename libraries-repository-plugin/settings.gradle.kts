@@ -1,10 +1,9 @@
 pluginManagement {
-    // 优先从源码构建解析插件
+    // 从源码构建解析插件
     includeBuild("../nyaadanbou-repository-plugin")
 
     repositories {
         gradlePluginPortal()
-        mavenLocal()
     }
 }
 
