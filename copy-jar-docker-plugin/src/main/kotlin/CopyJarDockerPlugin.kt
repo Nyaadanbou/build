@@ -14,6 +14,7 @@ class CopyJarDockerPlugin : Plugin<Project> {
             group = "nyaadanbou"
 
             // 配置属性
+            dockerHost.convention(extension.dockerHost)
             containerId.convention(extension.containerId)
             containerPath.convention(extension.containerPath)
             fileMode.convention(extension.fileMode)

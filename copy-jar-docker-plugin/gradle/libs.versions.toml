@@ -8,4 +8,6 @@ apache-commons-compress = "1.27.1"
 
 # Gradle plugin deps
 docker-java = { group = "com.github.docker-java", name = "docker-java", version.ref = "docker-java" }
+docker-java-core = { group = "com.github.docker-java", name = "docker-java-core", version.ref = "docker-java" }
+docker-java-transport-httpclient5 = { group = "com.github.docker-java", name = "docker-java-transport-httpclient5", version.ref = "docker-java" }
 apache-commons-compress = { group = "org.apache.commons", name = "commons-compress", version.ref = "apache-commons-compress" }

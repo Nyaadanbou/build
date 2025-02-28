@@ -20,7 +20,8 @@ repositories {
 }
 
 dependencies {
-    implementation(libs.docker.java)
+    implementation(libs.docker.java.core)
+    implementation(libs.docker.java.transport.httpclient5)
     implementation(libs.apache.commons.compress)
 }
 
