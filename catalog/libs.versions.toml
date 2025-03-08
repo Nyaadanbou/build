@@ -67,6 +67,7 @@ bom-configurate-gson = "cc.mewcraft.bom:configurate-gson:0.1"
 bom-configurate-yaml = "cc.mewcraft.bom:configurate-yaml:0.1"
 bom-configurate-extra-kotlin = "cc.mewcraft.bom:configurate-extra-kotlin:0.2"
 bom-configurate-extra-dfu4 = "cc.mewcraft.bom:configurate-extra-dfu4:0.2"
+bom-configurate-extra-dfu8 = "cc.mewcraft.bom:configurate-extra-dfu8:0.1"
 bom-creative = "cc.mewcraft.bom:creative:0.1"
 bom-hephaestus = "cc.mewcraft.bom:hephaestus:0.1"
 bom-invui = "cc.mewcraft.bom:invui:0.2"
@@ -163,6 +164,7 @@ configurate-yaml = { group = "cc.mewcraft.configurate", name = "configurate-yaml
 configurate-gson = { group = "cc.mewcraft.configurate", name = "configurate-gson", version.ref = "configurate" }
 configurate-extra-kotlin = { group = "cc.mewcraft.configurate", name = "configurate-extra-kotlin", version.ref = "configurate" }
 configurate-extra-dfu4 = { group = "cc.mewcraft.configurate", name = "configurate-extra-dfu4", version.ref = "configurate" }
+configurate-extra-dfu8 = { group = "cc.mewcraft.configurate", name = "configurate-extra-dfu8", version.ref = "configurate" }
 simplixstorage = { group = "com.github.simplix-softworks", name = "simplixstorage", version = "3.2.6" }
 
 # I18n
