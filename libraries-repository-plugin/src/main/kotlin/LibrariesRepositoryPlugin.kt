@@ -127,6 +127,7 @@ private fun RepositoryHandler.addLibrariesRepository() {
 
     maven("https://repo.codemc.io/repository/maven-public/") {
         content {
+            includeGroup("com.ghostchu") // QuickShop-Hikari
             includeGroup("me.hsgamer")
             includeGroup("me.hsgamer.bettergui")
         }
