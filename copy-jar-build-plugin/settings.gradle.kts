@@ -8,5 +8,5 @@ pluginManagement {
 }
 
 plugins {
-    id("nyaadanbou-repository") version "0.0.1-snapshot"
+    id("nyaadanbou-repository") version "0.0.3-snapshot"
 }

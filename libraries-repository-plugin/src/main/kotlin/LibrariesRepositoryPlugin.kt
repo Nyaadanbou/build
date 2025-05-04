@@ -27,12 +27,7 @@ private fun RepositoryHandler.addLibrariesRepository() {
     }
 
     maven("https://repo.papermc.io/repository/maven-public/") {
-        content {
-            includeGroup("com.velocitypowered") // Velocity
-            includeGroup("io.papermc.paper") // Paper
-            includeGroup("com.mojang") // DFU, brigadier, ...
-            includeGroup("net.md-5")
-        }
+        // We simply include all. We believe Paper won't upload random stuff to their repo.
     }
 
     maven("https://repo.dmulloy2.net/repository/public/") {
