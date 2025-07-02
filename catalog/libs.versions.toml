@@ -70,7 +70,7 @@ bom-configurate-extra-kotlin = "cc.mewcraft.bom:configurate-extra-kotlin:0.2"
 bom-configurate-extra-dfu4 = "cc.mewcraft.bom:configurate-extra-dfu4:0.2"
 bom-configurate-extra-dfu8 = "cc.mewcraft.bom:configurate-extra-dfu8:0.1"
 bom-creative = "cc.mewcraft.bom:creative:0.2"
-bom-exposed = "cc.mewcraft.bom:exposed:0.1"
+bom-exposed = "cc.mewcraft.bom:exposed:0.2"
 bom-hephaestus = "cc.mewcraft.bom:hephaestus:0.1"
 bom-invui = "cc.mewcraft.bom:invui:0.2"
 bom-jgit = "cc.mewcraft.bom:jgit:0.1"
@@ -207,6 +207,7 @@ cronutils = { group = "com.cronutils", name = "cron-utils", version = "9.2.1" }
 exposed-core = { group = "org.jetbrains.exposed", name = "exposed-core", version.ref = "exposed" }
 exposed-dao = { group = "org.jetbrains.exposed", name = "exposed-dao", version.ref = "exposed" }
 exposed-jdbc = { group = "org.jetbrains.exposed", name = "exposed-jdbc", version.ref = "exposed" }
+exposed-javatime = { group = "org.jetbrains.exposed", name = "exposed-java-time", version.ref = "exposed" }
 
 # Fast GUI creation
 anvilgui = { group = "net.wesjd", name = "anvilgui", version = "1.6.5-SNAPSHOT" }

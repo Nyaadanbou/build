@@ -19,6 +19,10 @@ dependencies {
         exclude("org.jetbrains.kotlin")
         exclude("org.jetbrains.kotlinx")
     }
+    api(libs.exposed.javatime) {
+        exclude("org.jetbrains.kotlin")
+        exclude("org.jetbrains.kotlinx")
+    }
 }
 
 publishing {
@@ -27,7 +31,7 @@ publishing {
             from(components["javaPlatform"])
             groupId = "cc.mewcraft.bom"
             artifactId = "exposed"
-            version = "0.1"
+            version = "0.2"
         }
     }
 }
