@@ -176,6 +176,12 @@ private fun RepositoryHandler.addLibrariesRepository() {
         }
     }
 
+    maven("https://repo.nexomc.com/releases") {
+        content {
+            includeGroup("team.unnamed")
+        }
+    }
+
     maven("https://repo.jeff-media.com/public/") {
         content {
             includeGroup("de.jeff_media") // ChestSort
