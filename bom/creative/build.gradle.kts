@@ -28,7 +28,7 @@ publishing {
             from(components["javaPlatform"])
             groupId = "cc.mewcraft.bom"
             artifactId = "creative"
-            version = "0.3"
+            version = "0.4"
         }
     }
 }
