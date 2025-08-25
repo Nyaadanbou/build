@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "cc.mewcraft.gradle"
-version = "0.0.4-snapshot"
+version = "0.0.5-snapshot"
 
 java {
     withSourcesJar()

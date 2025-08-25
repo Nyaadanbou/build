@@ -102,7 +102,7 @@ private fun RepositoryHandler.addLibrariesRepository() {
         }
     }
 
-    maven("https://repo.extendedclip.com/content/repositories/placeholderapi/") {
+    maven("https://repo.extendedclip.com/releases/") {
         content {
             includeGroup("me.clip") // PlaceholderAPI
         }
