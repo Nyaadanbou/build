@@ -12,26 +12,27 @@ class CopyJarBuildPlugin : Plugin<Project> {
 
         project.tasks.register<CopyJarBuildTask>("copyJarToBuild") {
             this.group = "nyaadanbou"
-
-            val archiveTask = extension.archiveTask.flatMap { archiveTaskName ->
-                project.tasks.named<AbstractArchiveTask>(archiveTaskName)
-            }
-            val fileName = extension.fileName.flatMap { name ->
-                if (name.isNullOrBlank()) {
-                    archiveTask.flatMap { it.archiveFileName }
-                } else {
-                    project.provider { name }
-                }
-            }
-
-            dependsOn(archiveTask)
-
-            from(archiveTask)
-            into(project.layout.buildDirectory)
-            rename { fileName.get() }
+            doNotTrackState("archiveTask is optional")
         }
 
         project.afterEvaluate {
+            val copyTask = project.tasks.named<CopyJarBuildTask>("copyJarToBuild").get()
+            val archiveTaskName = extension.archiveTask.orNull?.takeIf { it.isNotBlank() }
+
+            if (archiveTaskName != null) {
+                val archiveTask = project.tasks.named<AbstractArchiveTask>(archiveTaskName)
+                val fileName = extension.fileName.orNull?.takeIf { !it.isNullOrBlank() }
+                    ?.let { project.provider { it } }
+                    ?: archiveTask.flatMap { it.archiveFileName }
+
+                copyTask.dependsOn(archiveTask)
+                copyTask.from(archiveTask)
+                copyTask.into(project.layout.buildDirectory)
+                copyTask.rename { fileName.get() }
+            } else {
+                copyTask.onlyIf { false }
+            }
+
             project.configureTaskDependencies("copyJarToBuild")
         }
     }
