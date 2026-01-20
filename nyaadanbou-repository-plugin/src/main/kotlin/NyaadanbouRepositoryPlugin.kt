@@ -33,7 +33,7 @@ class NyaadanbouRepositoryForProjectPlugin : Plugin<Project> {
 
 // 暴露这些扩展函数, 以便在需要显式声明仓库时使用, 例如 publishing {}
 
-fun RepositoryHandler.nyaadanbouReleases(action: (MavenArtifactRepository) -> Unit = {}): MavenArtifactRepository {
+fun RepositoryHandler.nyaadanbouReleases(action: MavenArtifactRepository.() -> Unit = {}): MavenArtifactRepository {
     return maven {
         name = "nyaadanbouReleases"
         url = URI("https://repo.mewcraft.cc/releases")
@@ -42,7 +42,7 @@ fun RepositoryHandler.nyaadanbouReleases(action: (MavenArtifactRepository) -> Un
     }
 }
 
-fun RepositoryHandler.nyaadanbouSnapshots(action: (MavenArtifactRepository) -> Unit = {}): MavenArtifactRepository {
+fun RepositoryHandler.nyaadanbouSnapshots(action: MavenArtifactRepository.() -> Unit = {}): MavenArtifactRepository {
     return maven {
         name = "nyaadanbouSnapshots"
         url = URI("https://repo.mewcraft.cc/snapshots")
@@ -51,7 +51,7 @@ fun RepositoryHandler.nyaadanbouSnapshots(action: (MavenArtifactRepository) -> U
     }
 }
 
-fun RepositoryHandler.nyaadanbouPrivate(action: (MavenArtifactRepository) -> Unit = {}): MavenArtifactRepository {
+fun RepositoryHandler.nyaadanbouPrivate(action: MavenArtifactRepository.() -> Unit = {}): MavenArtifactRepository {
     return maven {
         name = "nyaadanbouPrivate"
         url = URI("https://repo.mewcraft.cc/private")
