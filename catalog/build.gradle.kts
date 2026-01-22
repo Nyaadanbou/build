@@ -12,12 +12,9 @@ catalog {
 publishing {
     repositories {
         maven {
-            name = "nyaadanbou"
+            name = "nyaadanbouPrivate"
             url = uri("https://repo.mewcraft.cc/private")
-            credentials {
-                username = project.findProperty("nyaadanbou.mavenUsername") as String?
-                password = project.findProperty("nyaadanbou.mavenPassword") as String?
-            }
+            credentials(PasswordCredentials::class)
         }
     }
     publications {
