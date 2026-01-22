@@ -1,4 +1,6 @@
 import org.gradle.api.Project
+import org.gradle.api.artifacts.ProjectDependency
+import org.gradle.kotlin.dsl.withType
 
 /**
  * Configures the given task to run after the copy task of all dependent projects.
@@ -10,20 +12,12 @@ fun Project.configureTaskDependencies(task: String) {
     if (compileJava.isEmpty()) return
 
     configurations.forEach { configuration ->
-        if (!configuration.isCanBeResolved) return@forEach
-        val resolved = runCatching { configuration.incoming.resolutionResult }.getOrNull() ?: return@forEach
+        configuration.dependencies.withType<ProjectDependency>().forEach { dep ->
+            val dependencyProjectPath = dep.path
+            val dependencyProject = rootProject.findProject(dependencyProjectPath) ?: return@forEach
+            if (!dependencyProject.tasks.names.contains(task)) return@forEach
 
-        val dependentProjectPaths = buildSet {
-            resolved.allComponents.forEach { component ->
-                val module = component.moduleVersion
-                val name = module?.name ?: return@forEach
-                val path = ":$name"
-                if (rootProject.findProject(path) != null) add(path)
-            }
-        }
-
-        dependentProjectPaths.forEach { projectPath ->
-            val dependencyTaskPath = "$projectPath:$task"
+            val dependencyTaskPath = "$dependencyProjectPath:$task"
             compileJava.configureEach {
                 mustRunAfter(dependencyTaskPath)
             }
