@@ -22,7 +22,7 @@ rootProject.name = "build"
 
 includeBuild("bom")
 includeBuild("catalog")
-includeBuild("conventions")
+//includeBuild("conventions")
 includeBuild("nyaadanbou-repository-plugin")
 includeBuild("libraries-repository-plugin")
 includeBuild("copy-jar-build-plugin")
