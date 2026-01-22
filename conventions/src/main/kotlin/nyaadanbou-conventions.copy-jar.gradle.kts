@@ -50,6 +50,8 @@
 
 import java.nio.file.Path
 import java.nio.file.Paths
+import org.gradle.process.ExecOperations
+import org.gradle.kotlin.dsl.support.serviceOf
 
 plugins {
     java
@@ -165,9 +167,14 @@ tasks {
             }
 
             for (syncPath in copyConfig.syncPaths) {
-                val args = arrayOf("rsync", "-avz", jarFile.path, syncPath)
+                val args = listOf("rsync", "-avz", jarFile.path, syncPath)
                 logger.lifecycle("Executing command: ${args.joinToString(" ")}")
-                exec { commandLine(*args) }
+
+                // Gradle 9: use ExecOperations service
+                val execOps = serviceOf<ExecOperations>()
+                execOps.exec {
+                    commandLine("rsync", "-avz", jarFile.path, syncPath)
+                }
             }
         }
     }
